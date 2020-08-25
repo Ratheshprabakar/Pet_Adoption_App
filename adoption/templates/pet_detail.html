@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<div>	
+			<h1>Pet Information</h1>
+			<h2 style="color: gold">{{ Pet.name }}</h2>
+			<p>{{ Pet.species }}</p>
+			{% if Pet.breed %}
+				<p>Breed: {{Pet.breed}}</p>
+			{% endif %}
+			{% if Pet.age %}
+				<p>Age: {{Pet.age}}</p>
+			{% endif %}
+			{% if Pet.sex %}
+				<p>Sex: {{Pet.sex}}</p>
+			{% endif %}
+			{% if Pet.vaccionation.all %}
+				<p>Vaccination:</p>
+				<ul>
+					{% for i in Pet.vaccionation.all %}
+						<li>{{i.name}}</li>
+					{% endfor %}
+				</ul>
+			{% endif %}
+			<p>Sumbitted by :{{Pet.submitter}}</p>
+</div>
+{% endblock %}

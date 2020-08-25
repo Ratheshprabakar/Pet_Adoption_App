@@ -1,0 +1,49 @@
+{% load static %}
+
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <title>Home - Sample Pet Adoption</title>
+        <link rel="stylesheet" id="ample-style-css" href="{% static 'style.css' %}" type="text/css" media="all">
+    </head>
+    <body class="wide">
+        <div id="page" class="hfeed site">
+            <header>
+                <div class="header">
+                    <div class="main-head-wrap inner-wrap clearfix">
+                        <div id="header-logo-image">
+                            <a href="/">
+                                <img src="{% static 'images/logo.png' %}" alt="Sample Pet Adoption">
+                            </a>
+                        </div>
+                        <div id="header-text" class="">
+                            <h1 id="site-title">
+                                <a href="/" title="Sample Pet Adoption" rel="home">Sample Pet Adoption</a>
+                            </h1>
+                            <p>We treat your pets like we treat our own.</p>
+                        </div>
+                    </div>
+                    <img src="{% static 'images/header.jpg' %}" alt="Sample Pet Adoption">
+                </div>
+            </header>
+            <div class="main-wrapper">
+                <div class="single-page clearfix">
+                    <div class="inner-wrap">
+                        <p>Wisdom Pet Medicine strives to blend the best in traditional and alternative medicine in the diagnosis and treatment of health conditions in companion animals, including dogs, cats, birds, reptiles, rodents, and fish. We apply the latest healthcare technology, along with the wisdom garnered in the centuries old tradition of veterinary medicine, to find the safest and most effective treatments and cures, while maintaining a caring relationship with our patients and their guardians.</p>
+                        <hr>
+                        <div>
+                                {% block content %}
+                                {% endblock %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer id="colophon" style="text-align: center;">
+                <div class="inner-wrap">
+                    Created by <a href="https://www.ratheshprabakar.me" style="color: gold">Rathesh Prabakar</a>
+                </div>
+            </footer>
+        </div>
+        <script src="{%static 'main.js' %}"></script>
+    </body>
+</html>
